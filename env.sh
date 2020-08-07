@@ -1,0 +1,1 @@
+export ALLOWED_HOSTS=localhost

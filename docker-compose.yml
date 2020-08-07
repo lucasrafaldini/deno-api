@@ -1,0 +1,16 @@
+version: "2.2"
+
+x-common_dev: &common_env
+services:
+  deno-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+    ports:
+      - "1667:1667"
+#     networks:
+#       - deno-net
+# networks:
+#   deno-net:
